@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Test</title>
+  <meta name="description" content="project basic description goes here">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--(if target dev)><!-->
+    <!--<link rel="stylesheet" type="text/css" href="../../styles/<%= iappname %>.css"/>-->
+    <!--<base href="/">-->
+    <link rel="stylesheet" href="styles/<%= iappname %>.css"/>
+    <!--<!(endif)-->
+    <!--(if target dist)>
+      <link rel="stylesheet" href="styles/<%= iappname %>.min.css"/>
+    <!(endif)-->
+</head>
+<body>
+<div id="header"></div>
+<div id="content">
+    <ul class="menu">
+        <li><a href="#/view1">view1</a></li>
+        <li><a href="#/view2">view2</a></li>
+    </ul>
+
+    <div ng-view></div>
+
+</div>
+<div id="footer"></div>
+<script src="bower_components/requirejs/require.js" data-main="scripts/config/requireConfig"></script>
+</body>
+</html>

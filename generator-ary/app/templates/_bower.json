@@ -1,0 +1,21 @@
+{
+    "name": "<%= iappname %>",
+    "description": "<%= idescription %>",
+    "version": "<%= iversion %>",
+    "homepage": "<%= ihomepage %>",
+    "license": "MIT",
+    "private": true,
+    "dependencies": {
+        "angular": "latest",
+        "angular-route": "latest",
+        "angular-loader": "latest",
+        "angular-resource": "latest",
+        "angular-cookies": "latest",
+        "angular-sanitize": "latest",
+        "angular-mocks": "latest",
+	"jquery": "latest",
+        "requirejs": "latest",
+        "requirejs-text": "latest",
+        "requirejs-domready": "latest"
+    }
+}
