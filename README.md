@@ -23,10 +23,10 @@ the following is a list of grunt plugins included on this generator
 * [grunt-contrib-concat] - concatenate files in to a single document
 * [grunt-contrib-cssmin] - css minification
 * [grunt-contrib-jshint] - tool to detect errors and potential problems in your JavaScript code
-* [grunt-regarde] - Observe a set of files for changes (useful for livereload features on development stage)
+* [grunt-regarde] - Observe a set of files for changes (useful for livereload features)
 * [grunt-contrib-connect] - plugin to create a server on specific port to serve the application
 * [grunt-contrib-livereload] - plugin used to load changed files on the fly (no page reload needed)
-* [grunt-targethtml] - Preproces HTML files by using target tags (useful to add remove html code depending on the target required)
+* [grunt-targethtml] - Preproces HTML files by using target tags
 * [grunt-open] - plugin to open a browser with the app served on it (saves the work to manually open a browser and enter a particular url)
 * [grunt-shell] - plugin to be able to interact with the Operative System (access to console)
 * [jshint-stylish] - plugin to see jshint reports with a nice GUI
