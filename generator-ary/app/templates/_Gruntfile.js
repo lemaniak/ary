@@ -62,22 +62,6 @@ module.exports = function (grunt) {
                 ]
             }
         },
-//        //concats all the stylesheets under the styles folder into a combined.css file
-//        concat: {
-//            styles: {
-//                src: [
-//                    '<%= yeoman.app %>/styles/*'
-//                ],
-//                dest: '<%= yeoman.app %>/<%= yeoman.build %>/<%= yeoman.pkg.name %>.css'
-//            }
-//        },
-//        //minifies the combined css file
-//        cssmin: {
-//            styles: {
-//                src: '<%= yeoman.app %>/<%= yeoman.build %>/<%= yeoman.pkg.name %>.css',
-//                dest: '<%= yeoman.app %>/<%= yeoman.build %>/<%= yeoman.pkg.name %>.min.css'
-//            }
-//        },
         // Make sure code styles are up to par and there are no obvious mistakes
         jshint: {
             options: {
@@ -95,15 +79,6 @@ module.exports = function (grunt) {
         shell: {
             gruntBuild: {
                 command: ' node_modules/requirejs/bin/r.js -o ./app/build.js '
-            }
-        },
-        // Copies the minified styles to the distribution folder
-        copy: {
-            styles: {
-                expand: true,
-                cwd: '<%= yeoman.app %>/<%= yeoman.build %>',
-                dest: '<%= yeoman.app %>/<%= yeoman.dist %>/styles',
-                src: '*.min.css'
             }
         },
         // The actual grunt server settings
@@ -158,22 +133,14 @@ module.exports = function (grunt) {
                 files: ['<%= yeoman.app %>/*.html', '<%= yeoman.app %>/views/*.html'],
                 tasks: ['livereload']
             }
-        },
-        targethtml: {
-            dist: {
-                files: {
-                    './app/dist/index.html': './app/index.html'
-                }
-            }
         }
 
     });
 
    //GRUNT DEFAULT TASK
     grunt.registerTask('default', [ 'build' ]);
-//    grunt.registerTask('build', [ 'clean:all', 'concat:styles', 'cssmin:styles', 'newer:jshint' ]);
     grunt.registerTask('build', [ 'clean:all', 'newer:jshint' ]);
     grunt.registerTask('serve', [ 'build','livereload-start', 'connect', 'open', 'regarde:all']);
-    grunt.registerTask('stage', [ 'build', 'shell:gruntBuild', 'clean:distStyles', 'copy:styles','targethtml:dist']);//TODO SERVE DISTRIBUTED FILES
+    grunt.registerTask('stage', [ 'build', 'shell:gruntBuild']);
 
 };
