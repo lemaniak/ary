@@ -34,8 +34,70 @@ the following is a list of grunt plugins included on this generator
 * [load-grunt-tasks] - Load multiple grunt tasks using globbing patterns (saves the work to manually add each grunt task)
 * [time-grunt] - Display the elapsed execution time of grunt tasks nice UI output
 
+
+
+### Installation
+
+You need NPM installed globally:
+
+1) install node js
+```sh
+$ sudo apt-get update
+$  sudo apt-get install -y python-software-properties python g++ make
+$ sudo add-apt-repository ppa:chris-lea/node.js
+$  sudo apt-get update
+$  sudo apt-get install nodejs
+```
+
+2) install grunt
+```sh
+$  sudo npm install -g grunt-cli
+```
+
+3) install requirejs
+```sh
+$  npm install requirejs
+```
+
+4) install yeoman
+```sh
+$  npm install -g yo
+```
+
+5) install git
+```sh
+$  sudo apt-get install git
+```
+
+6) install ARY generator
+choose a  location on your computer to store custom yeoman generator
+lets assume /home/yeoman/generators  will be our destination folder
+```sh
+$  cd /home/yeoman/generators
+$  git clone https://github.com/lemaniak/ary.git ary
+$  cd ./ary/generator-ary
+$  sudo npm link
+$  yo -h
+```
+
+the last command yo -h will list all our yeoman generators installed on the system so we should see our ARY
+generator on that list
+
+```sh
+Please choose a generator below.
+
+Ary
+  ary:app
+```
+
+
+once  all the required frameworks are installed we need to install out yeoman generator (ARY)
+
+
+
+
 [angular]:https://angularjs.org/
-[requirejs]:http://requirejs.org/
+[requirejs]: http://requirejs.org/
 [yeoman]:http://yeoman.io/
 [grunt-contrib-clean]:https://github.com/gruntjs/grunt-contrib-clean
 [grunt-contrib-concat]:https://github.com/gruntjs/grunt-contrib-concat
@@ -52,3 +114,5 @@ the following is a list of grunt plugins included on this generator
 [grunt-newer]: https://github.com/tschaub/grunt-newer
 [load-grunt-tasks]: https://www.npmjs.com/package/load-grunt-tasks
 [time-grunt]: https://www.npmjs.com/package/time-grunt
+
+
