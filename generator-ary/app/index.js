@@ -98,9 +98,10 @@ var AryGenerator = yeoman.generators.Base.extend({
 
         this.copy("app/views/_view1.html", "app/views/view1.html");
         this.copy("app/views/_view2.html", "app/views/view2.html");
-        
-        
-	this.copy("app/styles/_app.css", "app/styles/"+this.appname+".css");
+
+
+        this.template("app/styles/_app.css", "app/styles/"+this.appname+".css",context);
+	this.copy("app/styles/_app2.css", "app/styles/"+this.appname+"2.css");
 	this.copy("app/_build.js", "app/build.js");
         this.template("app/_index.html", "app/index.html",context);
         
