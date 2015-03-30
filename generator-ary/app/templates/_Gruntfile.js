@@ -28,7 +28,7 @@ module.exports = function (grunt) {
                 files: [
                     {
                         src: [
-                            '<%= yeoman.dist %>/*', '<%= yeoman.build %>/*'
+                            '<%= yeoman.app %>/<%= yeoman.dist %>/*', '<%= yeoman.app %>/<%= yeoman.build %>/*'
                         ]
                     }
                 ]
@@ -37,7 +37,7 @@ module.exports = function (grunt) {
                 files: [
                     {
                         src: [
-                            '<%= yeoman.dist %>/*'
+                            '<%= yeoman.app %>/<%= yeoman.dist %>/*'
                         ]
                     }
                 ]
@@ -46,7 +46,7 @@ module.exports = function (grunt) {
                 files: [
                     {
                         src: [
-                            '<%= yeoman.build %>/*'
+                            '<%= yeoman.app %>/<%= yeoman.build %>/*'
                         ]
                     }
                 ]
