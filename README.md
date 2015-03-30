@@ -15,7 +15,7 @@ ARY generator stands for [angular] [requirejs] [yeoman] and  the goal of the pro
 ### Version
 3.0.2
 
-### Tech
+### Technologies
 the following is a list of grunt plugins included on this generator
 
 * [grunt-contrib-clean] - clear files and folders
@@ -32,6 +32,7 @@ the following is a list of grunt plugins included on this generator
 * [jshint-stylish] - plugin to see jshint reports with a nice GUI
 * [grunt-newer] - Configure Grunt tasks to run with newer files only.
 * [load-grunt-tasks] - Load multiple grunt tasks using globbing patterns (saves the work to manually add each grunt task)
+* [time-grunt] - Display the elapsed execution time of grunt tasks nice UI output
 
 [angular]:https://angularjs.org/
 [requirejs]:http://requirejs.org/
@@ -50,3 +51,4 @@ the following is a list of grunt plugins included on this generator
 [jshint-stylish]:https://github.com/sindresorhus/jshint-stylish
 [grunt-newer]: https://github.com/tschaub/grunt-newer
 [load-grunt-tasks]: https://www.npmjs.com/package/load-grunt-tasks
+[time-grunt]: https://www.npmjs.com/package/time-grunt
