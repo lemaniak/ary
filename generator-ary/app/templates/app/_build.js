@@ -10,6 +10,5 @@
     ],
     fileExclusionRegExp: /^(build|build.*|.build*)$/,
     findNestedDependencies: true,
-    optimizeCss: 'none',
     removeCombined: true
 })
