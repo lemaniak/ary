@@ -62,22 +62,22 @@ module.exports = function (grunt) {
                 ]
             }
         },
-        //concats all the stylesheets under the styles folder into a combined.css file
-        concat: {
-            styles: {
-                src: [
-                    '<%= yeoman.app %>/styles/*'
-                ],
-                dest: '<%= yeoman.app %>/<%= yeoman.build %>/<%= yeoman.pkg.name %>.css'
-            }
-        },
-        //minifies the combined css file
-        cssmin: {
-            styles: {
-                src: '<%= yeoman.app %>/<%= yeoman.build %>/<%= yeoman.pkg.name %>.css',
-                dest: '<%= yeoman.app %>/<%= yeoman.build %>/<%= yeoman.pkg.name %>.min.css'
-            }
-        },
+//        //concats all the stylesheets under the styles folder into a combined.css file
+//        concat: {
+//            styles: {
+//                src: [
+//                    '<%= yeoman.app %>/styles/*'
+//                ],
+//                dest: '<%= yeoman.app %>/<%= yeoman.build %>/<%= yeoman.pkg.name %>.css'
+//            }
+//        },
+//        //minifies the combined css file
+//        cssmin: {
+//            styles: {
+//                src: '<%= yeoman.app %>/<%= yeoman.build %>/<%= yeoman.pkg.name %>.css',
+//                dest: '<%= yeoman.app %>/<%= yeoman.build %>/<%= yeoman.pkg.name %>.min.css'
+//            }
+//        },
         // Make sure code styles are up to par and there are no obvious mistakes
         jshint: {
             options: {
@@ -171,7 +171,8 @@ module.exports = function (grunt) {
 
    //GRUNT DEFAULT TASK
     grunt.registerTask('default', [ 'build' ]);
-    grunt.registerTask('build', [ 'clean:all', 'concat:styles', 'cssmin:styles', 'newer:jshint' ]);
+//    grunt.registerTask('build', [ 'clean:all', 'concat:styles', 'cssmin:styles', 'newer:jshint' ]);
+    grunt.registerTask('build', [ 'clean:all', 'newer:jshint' ]);
     grunt.registerTask('serve', [ 'build','livereload-start', 'connect', 'open', 'regarde:all']);
     grunt.registerTask('stage', [ 'build', 'shell:gruntBuild', 'clean:distStyles', 'copy:styles','targethtml:dist']);//TODO SERVE DISTRIBUTED FILES
 
