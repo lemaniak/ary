@@ -81,7 +81,7 @@ $  yo -h
 ```
 
 the last command yo -h will list all our yeoman generators installed on the system so we should see our ARY
-generator on that list
+generator on that list as follows
 
 ```sh
 Please choose a generator below.
@@ -90,8 +90,16 @@ Ary
   ary:app
 ```
 
+if we see our generator we are ready to use it now :)
+in order to create a new project just type
 
-once  all the required frameworks are installed we need to install out yeoman generator (ARY)
+```sh
+$  yo ary
+```
+
+and follow the wizard once finished we should see a new project with all the basic structure and plugins already configured for us
+
+
 
 
 
