@@ -7,7 +7,7 @@ require.config({
         "angular-cookies": "../bower_components/angular-cookies/angular-cookies",
         "angular-resource": "../bower_components/angular-resource/angular-resource",
         'domReady': '../bower_components/requirejs-domready/domReady',
-        'jquery': '../bower_components/jquery/dist/jquery'
+        'jquery': '../bower_components/jquery/jquery'
     },
     shim: {
 	"jquery": {

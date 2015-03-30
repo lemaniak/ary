@@ -13,7 +13,7 @@
         "angular-cookies": "latest",
         "angular-sanitize": "latest",
         "angular-mocks": "latest",
-	"jquery": "latest",
+        "jquery": "components/jquery#latest",
         "requirejs": "latest",
         "requirejs-text": "latest",
         "requirejs-domready": "latest"
