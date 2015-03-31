@@ -237,8 +237,26 @@ This task  clears our dist and build builders and then executes requirejs  optim
  ```
 
 ##Require Js options##
-in order to configure requirejs we have a file called build.js that contains configuration options
+in order to configure requirejs we have a file called build.js that contains the following configuration options
 ![alt tag](https://raw.githubusercontent.com/lemaniak/ary/master/images/requireJsConfig.png)
+
+**mainConfigFile**: the mainConfigFile option can be used to specify the location of the runtime config. If specified with the path to your main JS file, the first requirejs({}), requirejs.config({}), require({}), or require.config({}) found in that file will be parsed out and used as part of the configuration options passed to the optimizer:
+**appDir & baseUrl** RequireJS will use baseUrl to resolve the paths for any module names. The baseUrl should be relative to appDir.
+**dir** tells requirejs to apply all the optimizations for the specified folder
+**modules** specify the module names that we want to optimize, in our case we have some libraries that are non requirejs enabled by default (like angular) so we declared those libraries in our requirejsConfig file so we need to tell requirejs to optimize our third party libraries (modules) as well
+**fileExclusionRegExp** we specify a regular expresion to exclude all the files inside the build folder (as this folder is used for temporal storage of compiled files)
+**findNestedDependencies**  option to include nested dependencies in our js files
+**optimizeCss** option that specifies requirejs to optimize our css files as well
+  available options
+
+  -none - as you'd expect, no CSS optimization will occur
+  -standard - tries to inline imports, removes comments and line endings
+  -standard.keeplines - just like standard, but doesn't remove line endings
+  -standard.keepComments - keeps comments, but removes line endings
+  -standard.keepComments.keeplines - keeps comments and line endings
+
+**removeCombined** avoid coping the stand-alone versions of concatenated modules to the output directory (just keep concatenated files in our output directory)
+
 
 [angular]:https://angularjs.org/
 [requirejs]: http://requirejs.org/
