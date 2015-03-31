@@ -131,6 +131,10 @@ $ sudo npm install
 ### Wiki
 lets describe the contents of the project and give a brief explanation of its usage
 
+here is the main project structure
+
+![alt tag](https://raw.githubusercontent.com/lemaniak/ary/master/images/aplicationContent.png)
+
 **bowerrc**
 Here we find a .bowerrc file that is the bower configuration file that specifies the folder to use to store all the dependencies used with bower in our project all dependency libraries will be stored in app/bower_components (feel free to update the folder used for storage if needed)
 
