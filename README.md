@@ -138,6 +138,34 @@ here is the main project structure
 **bowerrc**
 Here we find a .bowerrc file that is the bower configuration file that specifies the folder to use to store all the dependencies used with bower in our project all dependency libraries will be stored in app/bower_components (feel free to update the folder used for storage if needed)
 
+**jshint**
+ is the jshint configuration file defining all the jshint compilation rules here is a link with all the available options for jshint
+*http://jshint.com/docs/options/
+
+**bower.json**
+this file contains our application libraries mentioned before (jquery angular etc...) and also contains project information like the version author  and description
+the important thing to explain for this file is, that all the lines inside the dependencies section  are the libraries  we want to use  in our project, so if we need to add a new library just add a new dependency and run bower install from the command line to install the dependencies
+
+**GruntFile.js**
+This File is used to specify all grunt tasks and configure each task to our needs
+The basic structure of a Grunt FIle is as follows
+
+```javascript
+module.exports = function (grunt) {// this is a wrapper function
+
+    // Load grunt tasks
+    require('load-grunt-tasks')(grunt);
+
+    // Define the configuration for all the tasks
+    grunt.initConfig({
+   ...
+     });
+
+   //grunt custom tasks useful for grouping tasks
+    grunt.registerTask('default', [ 'build' ]);
+};
+
+```
 
 
 [angular]:https://angularjs.org/
