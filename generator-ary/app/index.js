@@ -41,9 +41,9 @@ var AryGenerator = yeoman.generators.Base.extend({
         ];
 
         this.prompt(prompts, function (props) {
-	        this.appname = props.appname;
+	        this.appname = props.appname.split(' ').join('_').toLowerCase();
 		this.description = props.description;
-		this.version = props.version;
+		this.version = props.version.split(' ').join('.');
 		this.homepage = props.homepage;
 		this.author = props.author;           
             done();
@@ -62,11 +62,11 @@ var AryGenerator = yeoman.generators.Base.extend({
     copyFiles: function(){
 
         var context = {
-                iappname:this.appname.split(' ').join('_').toLowerCase(),
-		idescription : this.description,
-		iversion : this.version.split(' ').join('.'),
-		ihomepage : this.homepage,
-		iauthor : this.author
+                iappname:this.appname,
+		        idescription : this.description,
+                iversion : this.version,
+                ihomepage : this.homepage,
+                iauthor : this.author
         };
 
         this.copy("_bowerrc", ".bowerrc");
