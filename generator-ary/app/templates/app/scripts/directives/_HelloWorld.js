@@ -9,7 +9,7 @@ define(['angular','app'],function(angular,app){
             return {
                 restrict: 'E',
                 scope:true,
-                template: '<span>Hello {{name}}</span>'
+                templateUrl: './templates/helloworld.html'
 
             };
         });
