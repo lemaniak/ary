@@ -186,6 +186,7 @@ Tasks configurations  are specified in your Gruntfile via the grunt.initConfig m
 
 **Grunt Task**
 we are defining a javascript object called appconfig that contains some constants used in some grunt tasks.
+
   -pkg: contains the information in our  package.json file
   -app: specifies our application main folder
   -dist: specifies our distribution folder used to store our compiled project ready for production (distribution)
