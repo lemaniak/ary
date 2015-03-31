@@ -106,11 +106,18 @@ Ary
 ```
 
 if we see our generator we are ready to use it now :)
-in order to create a new project just type
+##USAGE##
+
+in order to create a new project just create a new folder and type
 
 ```sh
 $  yo ary
 ```
+
+this will launch the yeoman generator for us
+then just fill the wizard information and fill
+
+
 
 and follow the wizard once finished we should see a new project with all the basic structure and plugins already configured for us
 
@@ -249,6 +256,7 @@ this file contains all the grunt needed tasks and libraries
 ##Require Js options##
 
 in order to configure requirejs we have a file called build.js that contains the following configuration options
+
 ![alt tag](https://raw.githubusercontent.com/lemaniak/ary/master/images/requireJsConfig.png)
 
 **mainConfigFile**:
