@@ -193,23 +193,23 @@ we are defining a javascript object called appconfig that contains some constant
 
 inside our grunt config method we are defining a local object called yeoman with the contents of our previous defined constants for easier access of our grunt constants if you want you can use the appConfig object instead
 
-*Clean* (https://github.com/gruntjs/grunt-contrib-clean ) next we configure our clean plugin to clear specific folders like the dist and build folders that will be cleaned each time we want to repackage our project for distribution
-*jshint* : here we configure jshint to tell the location of the javascript files to compile in search of errors
-*shell*: here make use of the shell task to execute requirejs optimizer tool in order to generate a single concatenated minified javascript file containing all the javascript files of our application and also to create a minified concatenated stylesheet css
+**Clean** (https://github.com/gruntjs/grunt-contrib-clean ) next we configure our clean plugin to clear specific folders like the dist and build folders that will be cleaned each time we want to repackage our project for distribution
+**jshint** : here we configure jshint to tell the location of the javascript files to compile in search of errors
+**shell**: here make use of the shell task to execute requirejs optimizer tool in order to generate a single concatenated minified javascript file containing all the javascript files of our application and also to create a minified concatenated stylesheet css
  	by executing the following OS command:
 
 ```sh
 $  node_modules/requirejs/bin/r.js -o ./app/build.js
 ```
 
-*Connect* (https://github.com/gruntjs/grunt-contrib-connect ): here we configure the connect grunt task to start a server at a specified port in order to see our angular application
-*Open*: here we configure the open plugin to open up a browser for us pointing to our connect server
-*Regarde*: here we configure the regarde plugin to watch for changes in our project files and live reload those changes to our browser without the need to refresh the  page
+**Connect** (https://github.com/gruntjs/grunt-contrib-connect ): here we configure the connect grunt task to start a server at a specified port in order to see our angular application
+**Open**: here we configure the open plugin to open up a browser for us pointing to our connect server
+**Regarde**: here we configure the regarde plugin to watch for changes in our project files and live reload those changes to our browser without the need to refresh the  page
 
 
 3) custom task to run tasks in a specified sequence
 the generator provide 2 main custom tasks called
-*Serve task:
+**Serve task**:
 -clears our distribution and build folders
 -starts live reload feature
 -starts the connect server
@@ -221,7 +221,7 @@ to execute the task run the command
 $  grunt serve
 ```
 
-*Stage task:
+**Stage task**:
 This task  clears our dist and build builders and then executes requirejs  optimizer tool and copies all the contents to the distribution folder ready for production (concatenated and minified js and css)
 
 **package.json**: this file contains all the grunt needed tasks and libraries
@@ -238,7 +238,7 @@ This task  clears our dist and build builders and then executes requirejs  optim
 
 ##Require Js options##
 in order to configure requirejs we have a file called build.js that contains configuration options
-![alt tag](https://raw.githubusercontent.com/lemaniak/ary/master/images/gruntTasks.png)
+![alt tag](https://raw.githubusercontent.com/lemaniak/ary/master/images/requireJsConfig.png)
 
 [angular]:https://angularjs.org/
 [requirejs]: http://requirejs.org/
