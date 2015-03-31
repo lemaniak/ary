@@ -106,6 +106,7 @@ Ary
 ```
 
 if we see our generator we are ready to use it now :)
+
 ##USAGE##
 
 in order to create a new project just create a new folder and type
@@ -116,10 +117,15 @@ $  yo ary
 
 this will launch the yeoman generator for us
 then just fill the wizard information and fill
+ - your app name
+ - project description
+ - project version
+ - home page or url (if any)
 
+![alt tag](https://raw.githubusercontent.com/lemaniak/ary/master/images/yeomanPrompt.png)
 
+after this the generator will create the project for us
 
-and follow the wizard once finished we should see a new project with all the basic structure and plugins already configured for us
 
 in order to manually install bower dependencies run
 
@@ -134,6 +140,15 @@ in order to manually install grunt dependencies run
 $ sudo npm install
 ```
 
+we have 2 main grunt tasks
+
+**serve**:
+executes a grunt task that compiles the project and serve the project in a browser window
+
+**stage**
+executes a grunt task that compiles  concatenate, minifies and copy files to a distribution folder ready for production
+
+**Happy coding :)**
 
 ### Wiki
 lets describe the contents of the project and give a brief explanation of its usage
