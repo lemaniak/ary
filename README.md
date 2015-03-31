@@ -1,5 +1,8 @@
 # Yeoman generator for AngularJS + RequireJs
 
+### Note
+this generator is build to be use under linux OS soon  supporting more OS will be added
+
 ARY generator stands for [angular] [requirejs] [yeoman] and  the goal of the project is to share a yeoman generator with all the needed stuff to create a simple project using  this technologies.
 
 #Whats included
@@ -13,20 +16,22 @@ ARY generator stands for [angular] [requirejs] [yeoman] and  the goal of the pro
   - grunt tasks for a production ready packaging of the project
 
 ### Version
-3.0.2
+1.0.0
 
 ### Technologies
-the following is a list of grunt plugins included on this generator
 
+**RequireJS**
+to handle js files management ,js and css minification
+
+
+**Grunt JS**
+Grunt: to automate the following tasks
 * [grunt-contrib-clean] - clear files and folders
 * [grunt-contrib-copy] - copy files and folders
-* [grunt-contrib-concat] - concatenate files in to a single document
-* [grunt-contrib-cssmin] - css minification
 * [grunt-contrib-jshint] - tool to detect errors and potential problems in your JavaScript code
 * [grunt-regarde] - Observe a set of files for changes (useful for livereload features)
 * [grunt-contrib-connect] - plugin to create a server on specific port to serve the application
 * [grunt-contrib-livereload] - plugin used to load changed files on the fly (no page reload needed)
-* [grunt-targethtml] - Preproces HTML files by using target tags
 * [grunt-open] - plugin to open a browser with the app served on it (saves the work to manually open a browser and enter a particular url)
 * [grunt-shell] - plugin to be able to interact with the Operative System (access to console)
 * [jshint-stylish] - plugin to see jshint reports with a nice GUI
@@ -34,6 +39,16 @@ the following is a list of grunt plugins included on this generator
 * [load-grunt-tasks] - Load multiple grunt tasks using globbing patterns (saves the work to manually add each grunt task)
 * [time-grunt] - Display the elapsed execution time of grunt tasks nice UI output
 
+**Bower**
+to handle our web application  libraries:
+-Angular
+-Jquery
+-RequireJS
+-RequireJS-dom ready
+
+**JShint**
+to compile all of our javascript files and look for errors at compile time
+[jshint]
 
 
 ### Installation
@@ -99,8 +114,25 @@ $  yo ary
 
 and follow the wizard once finished we should see a new project with all the basic structure and plugins already configured for us
 
+in order to manually install bower dependencies run
 
 
+```sh
+$ bower install
+```
+
+in order to manually install grunt dependencies run
+
+```sh
+$ sudo npm install
+```
+
+
+### Wiki
+lets describe the contents of the project and give a brief explanation of its usage
+
+**bowerrc**
+Here we find a .bowerrc file that is the bower configuration file that specifies the folder to use to store all the dependencies used with bower in our project all dependency libraries will be stored in app/bower_components (feel free to update the folder used for storage if needed)
 
 
 
@@ -122,5 +154,6 @@ and follow the wizard once finished we should see a new project with all the bas
 [grunt-newer]: https://github.com/tschaub/grunt-newer
 [load-grunt-tasks]: https://www.npmjs.com/package/load-grunt-tasks
 [time-grunt]: https://www.npmjs.com/package/time-grunt
+[jshint]: http://jshint.com/
 
 
