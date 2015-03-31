@@ -180,8 +180,9 @@ grunt.loadNpmTasks(‘<plugin-name>’);
 
 2) configure each task (http://gruntjs.com/configuring-tasks):
 Tasks configurations  are specified in your Gruntfile via the grunt.initConfig method
- here is a brief overview of the used tasks
+ here is a brief overview of the used tasks and grunt configuration
 
+![alt tag](https://raw.githubusercontent.com/lemaniak/ary/master/images/gruntTasks.png)
 
 
 
