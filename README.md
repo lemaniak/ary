@@ -195,7 +195,9 @@ we are defining a javascript object called appconfig that contains some constant
 inside our grunt config method we are defining a local object called yeoman with the contents of our previous defined constants for easier access of our grunt constants if you want you can use the appConfig object instead
 
 **Clean** (https://github.com/gruntjs/grunt-contrib-clean ) next we configure our clean plugin to clear specific folders like the dist and build folders that will be cleaned each time we want to repackage our project for distribution
+
 **jshint** : here we configure jshint to tell the location of the javascript files to compile in search of errors
+
 **shell**: here make use of the shell task to execute requirejs optimizer tool in order to generate a single concatenated minified javascript file containing all the javascript files of our application and also to create a minified concatenated stylesheet css
  	by executing the following OS command:
 
@@ -204,13 +206,16 @@ $  node_modules/requirejs/bin/r.js -o ./app/build.js
 ```
 
 **Connect** (https://github.com/gruntjs/grunt-contrib-connect ): here we configure the connect grunt task to start a server at a specified port in order to see our angular application
+
 **Open**: here we configure the open plugin to open up a browser for us pointing to our connect server
+
 **Regarde**: here we configure the regarde plugin to watch for changes in our project files and live reload those changes to our browser without the need to refresh the  page
 
 
 3) custom task to run tasks in a specified sequence
 the generator provide 2 main custom tasks called
 **Serve task**:
+
 - clears our distribution and build folders
 - starts live reload feature
 - starts the connect server
@@ -223,11 +228,15 @@ $  grunt serve
 ```
 
 **Stage task**:
+
 This task  clears our dist and build builders and then executes requirejs  optimizer tool and copies all the contents to the distribution folder ready for production (concatenated and minified js and css)
 
-**package.json**: this file contains all the grunt needed tasks and libraries
+**package.json**:
+
+this file contains all the grunt needed tasks and libraries
 
 **Note**:
+
 - to install bower dependencies run
  ```sh
  $  bower install
@@ -238,16 +247,27 @@ This task  clears our dist and build builders and then executes requirejs  optim
  ```
 
 ##Require Js options##
+
 in order to configure requirejs we have a file called build.js that contains the following configuration options
 ![alt tag](https://raw.githubusercontent.com/lemaniak/ary/master/images/requireJsConfig.png)
 
-**mainConfigFile**: the mainConfigFile option can be used to specify the location of the runtime config. If specified with the path to your main JS file, the first requirejs({}), requirejs.config({}), require({}), or require.config({}) found in that file will be parsed out and used as part of the configuration options passed to the optimizer:
-**appDir & baseUrl** RequireJS will use baseUrl to resolve the paths for any module names. The baseUrl should be relative to appDir.
-**dir** tells requirejs to apply all the optimizations for the specified folder
-**modules** specify the module names that we want to optimize, in our case we have some libraries that are non requirejs enabled by default (like angular) so we declared those libraries in our requirejsConfig file so we need to tell requirejs to optimize our third party libraries (modules) as well
-**fileExclusionRegExp** we specify a regular expresion to exclude all the files inside the build folder (as this folder is used for temporal storage of compiled files)
-**findNestedDependencies**  option to include nested dependencies in our js files
-**optimizeCss** option that specifies requirejs to optimize our css files as well
+**mainConfigFile**:
+the mainConfigFile option can be used to specify the location of the runtime config. If specified with the path to your main JS file, the first requirejs({}), requirejs.config({}), require({}), or require.config({}) found in that file will be parsed out and used as part of the configuration options passed to the optimizer:
+
+**appDir & baseUrl**:
+ RequireJS will use baseUrl to resolve the paths for any module names. The baseUrl should be relative to appDir.
+
+**dir**:
+ tells requirejs to apply all the optimizations for the specified folder
+
+**modules**:
+ specify the module names that we want to optimize, in our case we have some libraries that are non requirejs enabled by default (like angular) so we declared those libraries in our requirejsConfig file so we need to tell requirejs to optimize our third party libraries (modules) as well
+
+**fileExclusionRegExp**: we specify a regular expresion to exclude all the files inside the build folder (as this folder is used for temporal storage of compiled files)
+
+**findNestedDependencies**:  option to include nested dependencies in our js files
+
+**optimizeCss**: option that specifies requirejs to optimize our css files as well
   available options
 
   - none - as you'd expect, no CSS optimization will occur
@@ -256,7 +276,9 @@ in order to configure requirejs we have a file called build.js that contains the
   - standard.keepComments - keeps comments, but removes line endings
   - standard.keepComments.keeplines - keeps comments and line endings
 
-**removeCombined** avoid coping the stand-alone versions of concatenated modules to the output directory (just keep concatenated files in our output directory)
+**removeCombined**:
+
+ avoid coping the stand-alone versions of concatenated modules to the output directory (just keep concatenated files in our output directory)
 
 
 [angular]:https://angularjs.org/
