@@ -168,6 +168,7 @@ module.exports = function (grunt) {// this is a wrapper function
 ```
 
 so in this file we have to do certain things
+
  1) load all the grunt tasks (load-grunt task will be used to automatically load all of our tasks instead of manually add each task)
 	if we don't want to use this plugin then we need to load the needed grunt task as follows:
 
@@ -176,25 +177,13 @@ so in this file we have to do certain things
 grunt.loadNpmTasks(‘<plugin-name>’);
 
 ```
+
 2) configure each task (http://gruntjs.com/configuring-tasks):
-Tasks configuration  are specified in your Gruntfile via the grunt.initConfig method
- brief overview of each task and provide the links for each task in case you feel like going deeper in to configuration details:
+Tasks configurations  are specified in your Gruntfile via the grunt.initConfig method
+ here is a brief overview of the used tasks
 
-```javascript
 
-grunt.initConfig({
-          concat: {
-            // concat task configuration goes here.
-          },
-          uglify: {
-            // uglify task configuration goes here.
-          },
-          // Arbitrary non-task-specific properties.
-          my_property: 'whatever',
-          my_src_files: ['foo/*.js', 'bar/*.js'],
-       });
 
-```
 
 [angular]:https://angularjs.org/
 [requirejs]: http://requirejs.org/
