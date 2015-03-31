@@ -187,10 +187,10 @@ Tasks configurations  are specified in your Gruntfile via the grunt.initConfig m
 **Grunt Task**
 we are defining a javascript object called appconfig that contains some constants used in some grunt tasks.
 
-  -pkg: contains the information in our  package.json file
-  -app: specifies our application main folder
-  -dist: specifies our distribution folder used to store our compiled project ready for production (distribution)
-  -build: specifies a temporal build folder useful in case we need a temporal location to store compiled files like concatenated files or minified files that need later to be copied to the distribution folder once all operations needed for those files are done
+  - pkg: contains the information in our  package.json file
+  - app: specifies our application main folder
+  - dist: specifies our distribution folder used to store our compiled project ready for production (distribution)
+  - build: specifies a temporal build folder useful in case we need a temporal location to store compiled files like concatenated files or minified files that need later to be copied to the distribution folder once all operations needed for those files are done
 
 inside our grunt config method we are defining a local object called yeoman with the contents of our previous defined constants for easier access of our grunt constants if you want you can use the appConfig object instead
 
@@ -211,11 +211,11 @@ $  node_modules/requirejs/bin/r.js -o ./app/build.js
 3) custom task to run tasks in a specified sequence
 the generator provide 2 main custom tasks called
 **Serve task**:
--clears our distribution and build folders
--starts live reload feature
--starts the connect server
--open a browser pointing to the url where our application is being serve
--start watching changes for files to automatically reload those changes
+- clears our distribution and build folders
+- starts live reload feature
+- starts the connect server
+- open a browser pointing to the url where our application is being serve
+- start watching changes for files to automatically reload those changes
 to execute the task run the command
 
 ```sh
@@ -228,11 +228,11 @@ This task  clears our dist and build builders and then executes requirejs  optim
 **package.json**: this file contains all the grunt needed tasks and libraries
 
 **Note**:
--to install bower dependencies run
+- to install bower dependencies run
  ```sh
  $  bower install
  ```
--to install grunt dependencies run
+- to install grunt dependencies run
 ```sh
  $  sudo npm install
  ```
@@ -250,11 +250,11 @@ in order to configure requirejs we have a file called build.js that contains the
 **optimizeCss** option that specifies requirejs to optimize our css files as well
   available options
 
-  -none - as you'd expect, no CSS optimization will occur
-  -standard - tries to inline imports, removes comments and line endings
-  -standard.keeplines - just like standard, but doesn't remove line endings
-  -standard.keepComments - keeps comments, but removes line endings
-  -standard.keepComments.keeplines - keeps comments and line endings
+  - none - as you'd expect, no CSS optimization will occur
+  - standard - tries to inline imports, removes comments and line endings
+  - standard.keeplines - just like standard, but doesn't remove line endings
+  - standard.keepComments - keeps comments, but removes line endings
+  - standard.keepComments.keeplines - keeps comments and line endings
 
 **removeCombined** avoid coping the stand-alone versions of concatenated modules to the output directory (just keep concatenated files in our output directory)
 
