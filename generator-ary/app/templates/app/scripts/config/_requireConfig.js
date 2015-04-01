@@ -5,6 +5,7 @@ require.config({
         "angular-route": "../bower_components/angular-route/angular-route",
         "angular-sanitize": "../bower_components/angular-sanitize/angular-sanitize",
         "angular-cookies": "../bower_components/angular-cookies/angular-cookies",
+        "angular-translate": "../bower_components/angular-translate/angular-translate",
         "angular-resource": "../bower_components/angular-resource/angular-resource",
         'domReady': '../bower_components/requirejs-domready/domReady',
         'jquery': '../bower_components/jquery/jquery'
@@ -20,6 +21,9 @@ require.config({
             "deps": ["angular"]
         },
         "angular-cookies": {
+            "deps": ["angular"]
+        },
+        "angular-translate": {
             "deps": ["angular"]
         },
         "angular-resource": {

@@ -77,9 +77,12 @@ var AryGenerator = yeoman.generators.Base.extend({
 	this.template("_package.json", "package.json",context);	
 
         this.template("app/scripts/_app.js", "app/scripts/app.js",context);
+        this.copy("app/scripts/_constants.js", "app/scripts/constants.js");
         this.copy("app/scripts/_controllers.js", "app/scripts/controllers.js");
         this.copy("app/scripts/_directives.js", "app/scripts/directives.js");
         this.copy("app/scripts/_filters.js", "app/scripts/filters.js");
+        this.copy("app/scripts/_init.js", "app/scripts/init.js");
+        this.copy("app/scripts/_languajes.js", "app/scripts/languajes.js");
         this.copy("app/scripts/_routes.js", "app/scripts/routes.js");
         this.copy("app/scripts/_services.js", "app/scripts/services.js");
 
@@ -93,6 +96,8 @@ var AryGenerator = yeoman.generators.Base.extend({
         this.copy("app/scripts/directives/_HelloWorld.js", "app/scripts/directives/HelloWorld.js");
         this.copy("app/scripts/filters/_Interpolate.js", "app/scripts/filters/Interpolate.js");	
         this.copy("app/scripts/services/_Version.js", "app/scripts/services/Version.js");	
+        this.copy("app/scripts/languajes/_englishBundle.js", "app/scripts/languajes/englishBundle.js");
+        this.copy("app/scripts/languajes/_spanishBundle.js", "app/scripts/languajes/spanishBundle.js");
 
 
 
@@ -103,6 +108,8 @@ var AryGenerator = yeoman.generators.Base.extend({
 
         this.template("app/styles/_app.css", "app/styles/"+this.appname+".css",context);
 	this.copy("app/styles/_app2.css", "app/styles/"+this.appname+"2.css");
+	this.copy("app/images/_picturePlaceholder.png", "app/images/picturePlaceholder.png");
+	this.copy("app/fonts/_COLWELLA.TTF", "app/fonts/COLWELLA.TTF");
 	this.copy("app/_build.js", "app/build.js");
         this.template("app/_index.html", "app/index.html",context);
         

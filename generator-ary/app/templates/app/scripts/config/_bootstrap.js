@@ -5,9 +5,12 @@ define([
     'require',
     'angular',
     'app',
+    'constants',
     'controllers',
     'directives',
     'filters',
+    'init',
+    'languajes',
     'routes',
     'services'
 ], function (require, angular) {
