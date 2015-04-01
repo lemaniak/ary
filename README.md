@@ -1,16 +1,16 @@
 # Yeoman generator for AngularJS + RequireJs
 
 ### Note
-this generator is build to be use under linux OS soon  supporting more OS will be added
+this generator is build to be used under linux OS (soon  supporting more OS will be added)
 
-ARY generator stands for [angular] [requirejs] [yeoman] and  the goal of the project is to share a yeoman generator with all the needed stuff to create a simple project using  this technologies.
+ARY generator stands for [angular] [require] [yeoman] and  the goal of the project is to share a yeoman generator with all the needed stuff to create a simple project using  this technologies.
 
 #Whats included
   - AngularJS nice folder distribution for Enterprise or Small projects
   - css concatenation and minification using grunt
   - live reload feature (nice to have for development stage)
   - jshint (javascript project files get compiled using jshint for optimal javascript standards)
-  - requirejs for javascript concatenation and minification
+  - requirejs for javascript files resolution concatenation and minification
   - grunt connect plugin to start a development web server
   - grunt open to let grunt open the browser for us everytime we decide to serve the files locally (saves the time of manually open the browser each time we need to test something and need to bring up the webserver to see changes)
   - grunt tasks for a production ready packaging of the project
@@ -107,7 +107,7 @@ Ary
 
 if we see our generator we are ready to use it now :)
 
-##USAGE##
+##Usage##
 
 in order to create a new project just create a new folder and type
 
@@ -144,9 +144,15 @@ we have 2 main grunt tasks
 
 **serve**:
 executes a grunt task that compiles the project and serve the project in a browser window
+```sh
+$ grunt serve
+```
 
 **stage**
 executes a grunt task that compiles  concatenate, minifies and copy files to a distribution folder ready for production
+```sh
+$ grunt stage
+```
 
 **Happy coding :)**
 
@@ -305,7 +311,7 @@ the mainConfigFile option can be used to specify the location of the runtime con
 
 
 [angular]:https://angularjs.org/
-[requirejs]: http://requirejs.org/
+[require]: http://requirejs.org/
 [yeoman]:http://yeoman.io/
 [grunt-contrib-clean]:https://github.com/gruntjs/grunt-contrib-clean
 [grunt-contrib-concat]:https://github.com/gruntjs/grunt-contrib-concat
