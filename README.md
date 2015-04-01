@@ -3,7 +3,7 @@
 ### Note
 this generator is build to be used under linux OS (soon  supporting more OS will be added)
 
-ARY generator stands for [angular] [require] [yeoman] and  the goal of the project is to share a yeoman generator with all the needed stuff to create a simple project using  this technologies.
+ARY generator stands for [angular] - [require] - [yeoman] and  the goal of the project is to share a yeoman generator with all the needed stuff to create a simple project using  this technologies.
 
 #Whats included
   - AngularJS nice folder distribution for Enterprise or Small projects
